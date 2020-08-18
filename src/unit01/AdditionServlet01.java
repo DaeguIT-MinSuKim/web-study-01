@@ -14,9 +14,6 @@ import unit01.dao.TitleDao;
 import unit01.dao.TitleDaoImpl;
 import unit01.dto.Title;
 
-/**
- * Servlet implementation class AdditionServlet01
- */
 @WebServlet("/AdditionServlet01")
 public class AdditionServlet01 extends HttpServlet {
     private static final long serialVersionUID = 1L;
@@ -35,7 +32,7 @@ public class AdditionServlet01 extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         List<Title> list = dao.selectTitleByAll();
-        for(Title t : list) {
+        for (Title t : list) {
             System.out.println(t);
         }
         int num1 = Integer.parseInt(request.getParameter("num1"));
