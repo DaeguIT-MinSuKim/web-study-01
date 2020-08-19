@@ -35,15 +35,15 @@ public class AdditionServlet01 extends HttpServlet {
         for (Title t : list) {
             System.out.println(t);
         }
-        int num1 = Integer.parseInt(request.getParameter("num1"));
+        /* int num1 = Integer.parseInt(request.getParameter("num1"));
         int num2 = Integer.parseInt(request.getParameter("num2"));
         int add = num1 + num2;
-
+        
         request.setAttribute("num1", num1);
         request.setAttribute("num2", num2);
         request.setAttribute("add", add);
+        request.setAttribute("list", list);*/
         request.setAttribute("list", list);
-
         RequestDispatcher dispatcher = request.getRequestDispatcher("add.jsp");
         dispatcher.forward(request, response);
     }
